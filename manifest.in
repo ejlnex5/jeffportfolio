@@ -1,0 +1,5 @@
+include portapp/schema.sql
+graft portapp/static
+graft portapp/templates
+global-exclude *.pyc
+
