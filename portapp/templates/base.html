@@ -1,7 +1,9 @@
-<!doctype html>
-<title>{% block title %}{% endblock %} - Portfolio</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-<nav>
+{% extends "bootstrap/base.html" %}
+{% block title %}Jeff's Portfolio{% endblock %}
+<!--<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+--->
+{% block navbar %}
+<div>
   <h1>Portfolio</h1>
   <ul>
     {% if g.user %}
@@ -12,7 +14,8 @@
       <li><a href="{{ url_for('auth.login') }}">Log In</a>
     {% endif %}
   </ul>
-</nav>
+</div>
+{% endblock %}
 <section class="content">
   <header>
     {% block header %}{% endblock %}
